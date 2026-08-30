@@ -49,15 +49,15 @@ evidence. These skills make the workflow portable across supported agents.
 List the catalog:
 
 ```bash
-npx aeokit-skills@latest list
+npx @aeokit/skills@latest list
 ```
 
 Install one skill into the current repository:
 
 ```bash
-npx aeokit-skills@latest add aeo-improve --to agents
-npx aeokit-skills@latest add aeo-improve --to claude
-npx aeokit-skills@latest add aeo-improve --to agent
+npx @aeokit/skills@latest add aeo-improve --to agents
+npx @aeokit/skills@latest add aeo-improve --to claude
+npx @aeokit/skills@latest add aeo-improve --to agent
 ```
 
 The shared `agents` target works with Codex, Cursor, GitHub Copilot, and Gemini CLI. The aliases `codex`, `cursor`, `copilot`, and `gemini` resolve to that same location.
@@ -65,9 +65,9 @@ The shared `agents` target works with Codex, Cursor, GitHub Copilot, and Gemini 
 Install all skills for your user account:
 
 ```bash
-npx aeokit-skills@latest add --all --to agents --scope user
-npx aeokit-skills@latest add --all --to claude --scope user
-npx aeokit-skills@latest add --all --to agent --scope user
+npx @aeokit/skills@latest add --all --to agents --scope user
+npx @aeokit/skills@latest add --all --to claude --scope user
+npx @aeokit/skills@latest add --all --to agent --scope user
 ```
 
 Existing directories are never replaced unless `--force` is explicit. Use `--dry-run` to inspect destinations first.
