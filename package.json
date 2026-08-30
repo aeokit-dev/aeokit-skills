@@ -1,10 +1,10 @@
 {
-  "name": "aeo-skills",
-  "version": "0.1.0",
+  "name": "aeokit-skills",
+  "version": "0.1.1",
   "description": "Portable Agent Skills for evidence-backed answer-engine optimization workflows.",
   "type": "module",
   "bin": {
-    "aeo-skills": "bin/aeo-skills.js"
+    "aeokit-skills": "bin/aeo-skills.js"
   },
   "files": [
     "bin",
@@ -48,7 +48,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
+  "dependencies": {
     "yaml": "^2.9.0"
   }
 }
