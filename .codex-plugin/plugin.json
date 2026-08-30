@@ -1,0 +1,31 @@
+{
+  "name": "aeokit",
+  "version": "0.1.0",
+  "description": "Evidence-backed AEO audits, improvements, and observations.",
+  "author": {
+    "name": "AEOkit contributors"
+  },
+  "homepage": "https://github.com/aeokit-dev/aeo-skills",
+  "repository": "https://github.com/aeokit-dev/aeo-skills",
+  "license": "MIT",
+  "keywords": [
+    "aeo",
+    "agent-skills",
+    "answer-engine-optimization"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AEOkit",
+    "shortDescription": "Evidence-backed answer-engine optimization",
+    "longDescription": "Audit answer-engine readiness, improve source evidence, and measure brand mentions and citations with reproducible AEO workflows.",
+    "developerName": "AEOkit contributors",
+    "category": "Productivity",
+    "capabilities": [],
+    "websiteURL": "https://github.com/aeokit-dev/aeo-skills",
+    "defaultPrompt": [
+      "Audit this site for answer-engine readiness.",
+      "Improve this site for a specific buyer question.",
+      "Measure brand mentions and citations across buyer prompts."
+    ]
+  }
+}

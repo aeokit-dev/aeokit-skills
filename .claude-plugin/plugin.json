@@ -1,0 +1,11 @@
+{
+  "name": "aeokit",
+  "description": "Evidence-backed AEO audits, improvements, and observations.",
+  "version": "0.1.0",
+  "author": {
+    "name": "AEOkit contributors"
+  },
+  "homepage": "https://github.com/aeokit-dev/aeo-skills",
+  "repository": "https://github.com/aeokit-dev/aeo-skills",
+  "license": "MIT"
+}

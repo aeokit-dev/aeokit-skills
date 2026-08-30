@@ -1,0 +1,4 @@
+interface:
+  display_name: "AEO Audit"
+  short_description: "Audit site evidence and answer-engine readiness"
+  default_prompt: "Use $aeo-audit to audit this site for answer-engine readiness."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AEO Improve"
+  short_description: "Improve a site with evidence-backed AEO changes"
+  default_prompt: "Use $aeo-improve to improve this site for a buyer question."

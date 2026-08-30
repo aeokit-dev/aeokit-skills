@@ -1,0 +1,54 @@
+{
+  "name": "aeo-skills",
+  "version": "0.1.0",
+  "description": "Portable Agent Skills for evidence-backed answer-engine optimization workflows.",
+  "type": "module",
+  "bin": {
+    "aeo-skills": "bin/aeo-skills.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "skills",
+    "research",
+    ".codex-plugin",
+    ".claude-plugin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "validate:skills": "node src/validate.js",
+    "audit:citations": "node src/audit-citations.js",
+    "check": "node --check bin/aeo-skills.js && node --check src/cli.js && node --check src/audit-citations.js && npm run validate:skills && npm run audit:citations && node --test",
+    "prepublishOnly": "npm run check"
+  },
+  "engines": {
+    "node": ">=22.19"
+  },
+  "keywords": [
+    "agent-skills",
+    "aeo",
+    "codex",
+    "cursor",
+    "github-copilot",
+    "gemini-cli",
+    "claude-code",
+    "aeokit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeokit-dev/aeo-skills.git"
+  },
+  "homepage": "https://github.com/aeokit-dev/aeo-skills#readme",
+  "bugs": {
+    "url": "https://github.com/aeokit-dev/aeo-skills/issues"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "yaml": "^2.9.0"
+  }
+}

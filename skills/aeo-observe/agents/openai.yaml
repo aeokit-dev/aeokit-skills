@@ -1,0 +1,4 @@
+interface:
+  display_name: "AEO Observe"
+  short_description: "Measure brand mentions and citations reproducibly"
+  default_prompt: "Use $aeo-observe to measure this brand across buyer questions."
