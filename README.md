@@ -14,20 +14,50 @@ Portable Agent Skills by AEOkit for evidence-backed answer-engine optimization. 
 
 The skills use the open Agent Skills folder format. They remain useful without AEO Agent; when AEOkit tools are installed, the instructions use them for deterministic checks and reproducible observations.
 
+## Zero to cited
+
+SEO competes to rank a page. AEO competes to make useful evidence available to
+an AI-generated answer. A new, original source can potentially appear in an
+answer as soon as a live answer engine discovers it and finds it relevant; it
+does not necessarily need months of ranking history first. Inclusion is never
+guaranteed, so this repository provides a reproducible workflow rather than a
+promise of instant visibility.
+
+Use the three skills together to follow a source from publication to its first
+observed citation:
+
+```text
+aeo-audit -> aeo-improve -> publish -> aeo-observe
+                                      |
+                                      v
+                 crawler visit -> mention -> citation
+```
+
+- `aeo-audit` checks whether the source is accessible, extractable, and
+  supported by verifiable evidence.
+- `aeo-improve` makes the smallest authorized change for a specific buyer
+  question and verifies the local result.
+- `aeo-observe` repeats stable prompts and records what answer engines actually
+  mention and cite.
+
+AEOkit is the system of record for auditable answers, citations, mentions, and
+crawler activity. AEO Agent is the conversational interface for exploring that
+evidence. These skills make the workflow portable across supported agents.
+
 ## Install skill folders
 
 List the catalog:
 
 ```bash
-npx aeo-skills@latest list
+npx aeokit-skills@latest list
 ```
 
 Install one skill into the current repository:
 
 ```bash
-npx aeo-skills@latest add aeo-improve --to agents
-npx aeo-skills@latest add aeo-improve --to claude
-npx aeo-skills@latest add aeo-improve --to agent
+npx aeokit-skills@latest add aeo-improve --to agents
+npx aeokit-skills@latest add aeo-improve --to claude
+npx aeokit-skills@latest add aeo-improve --to agent
 ```
 
 The shared `agents` target works with Codex, Cursor, GitHub Copilot, and Gemini CLI. The aliases `codex`, `cursor`, `copilot`, and `gemini` resolve to that same location.
@@ -35,9 +65,9 @@ The shared `agents` target works with Codex, Cursor, GitHub Copilot, and Gemini 
 Install all skills for your user account:
 
 ```bash
-npx aeo-skills@latest add --all --to agents --scope user
-npx aeo-skills@latest add --all --to claude --scope user
-npx aeo-skills@latest add --all --to agent --scope user
+npx aeokit-skills@latest add --all --to agents --scope user
+npx aeokit-skills@latest add --all --to claude --scope user
+npx aeokit-skills@latest add --all --to agent --scope user
 ```
 
 Existing directories are never replaced unless `--force` is explicit. Use `--dry-run` to inspect destinations first.

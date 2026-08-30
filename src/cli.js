@@ -2,7 +2,7 @@ import { catalog } from './catalog.js';
 import { installSkills, targetRoot } from './install.js';
 import { validateSkills } from './validate.js';
 
-const version = '0.1.0';
+const version = '0.1.1';
 
 function parse(argv) {
   const [command = 'help', ...rest] = argv;
@@ -20,7 +20,7 @@ function parse(argv) {
 }
 
 function help() {
-  console.log(`AEO Skills ${version} by AEOkit\n\nUsage:\n  aeo-skills list [--json]\n  aeo-skills add <skill> --to agents|claude|agent [--scope project|user]\n  aeo-skills add --all --to agents|claude|agent [--dry-run] [--force]\n  aeo-skills doctor\n\nProject locations:\n  Shared agents  .agents/skills/  (Codex, Cursor, Copilot, Gemini)\n  Claude Code    .claude/skills/\n  AEO Agent      .aeokit/skills/\n\nAliases codex, cursor, copilot, and gemini resolve to the shared agents location. User locations use the corresponding directory under the user's home. Existing skills are never replaced unless --force is explicit.`);
+  console.log(`AEO Skills ${version} by AEOkit\n\nUsage:\n  aeokit-skills list [--json]\n  aeokit-skills add <skill> --to agents|claude|agent [--scope project|user]\n  aeokit-skills add --all --to agents|claude|agent [--dry-run] [--force]\n  aeokit-skills doctor\n\nProject locations:\n  Shared agents  .agents/skills/  (Codex, Cursor, Copilot, Gemini)\n  Claude Code    .claude/skills/\n  AEO Agent      .aeokit/skills/\n\nAliases codex, cursor, copilot, and gemini resolve to the shared agents location. User locations use the corresponding directory under the user's home. Existing skills are never replaced unless --force is explicit.`);
 }
 
 export async function main(argv) {
