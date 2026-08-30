@@ -1,0 +1,24 @@
+{
+  "name": "aeokit",
+  "owner": {
+    "name": "aeokit"
+  },
+  "description": "Evidence-backed answer-engine optimization skills from aeokit.",
+  "plugins": [
+    {
+      "name": "aeokit",
+      "source": ".",
+      "description": "Audit answer-engine readiness, improve source evidence, and observe brand mentions and citations.",
+      "version": "0.1.1",
+      "author": {
+        "name": "aeokit"
+      },
+      "category": "marketing",
+      "tags": [
+        "aeo",
+        "answer-engine-optimization",
+        "agent-skills"
+      ]
+    }
+  ]
+}
