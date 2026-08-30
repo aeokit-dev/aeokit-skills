@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "Evidence-backed AEO audits, improvements, and observations.",
   "author": {
-    "name": "AEOkit contributors"
+    "name": "aeokit"
   },
   "homepage": "https://github.com/aeokit-dev/aeo-skills",
   "repository": "https://github.com/aeokit-dev/aeo-skills",
@@ -15,10 +15,10 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AEOkit",
+    "displayName": "aeokit",
     "shortDescription": "Evidence-backed answer-engine optimization",
     "longDescription": "Audit answer-engine readiness, improve source evidence, and measure brand mentions and citations with reproducible AEO workflows.",
-    "developerName": "AEOkit contributors",
+    "developerName": "aeokit",
     "category": "Productivity",
     "capabilities": [],
     "websiteURL": "https://github.com/aeokit-dev/aeo-skills",

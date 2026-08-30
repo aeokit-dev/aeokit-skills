@@ -1,6 +1,6 @@
 # AEO Skills
 
-Portable Agent Skills by AEOkit for evidence-backed answer-engine optimization. The same `SKILL.md` workflows run in ChatGPT, Codex, Cursor, GitHub Copilot, Gemini CLI, Claude Code, or [AEO Agent](https://github.com/aeokit-dev/aeo-agent).
+Portable Agent Skills by aeokit for evidence-backed answer-engine optimization. The same `SKILL.md` workflows run in ChatGPT, Codex, Cursor, GitHub Copilot, Gemini CLI, Claude Code, or [AEO Agent](https://github.com/aeokit-dev/aeo-agent).
 
 **Audit the evidence:** [Open the numbered research claim and source ledger](research/report-source.md#citation-and-traceability-registry).
 
@@ -12,7 +12,7 @@ Portable Agent Skills by AEOkit for evidence-backed answer-engine optimization. 
 | `aeo-improve` | Diagnose one buyer question, propose or implement a small patch, and verify it honestly |
 | `aeo-observe` | Run stable buyer prompts and report mentions, citations, uncertainty, and raw evidence |
 
-The skills use the open Agent Skills folder format. They remain useful without AEO Agent; when AEOkit tools are installed, the instructions use them for deterministic checks and reproducible observations.
+The skills use the open Agent Skills folder format. They remain useful without AEO Agent; when aeokit tools are installed, the instructions use them for deterministic checks and reproducible observations.
 
 ## Zero to cited
 
@@ -40,11 +40,26 @@ aeo-audit -> aeo-improve -> publish -> aeo-observe
 - `aeo-observe` repeats stable prompts and records what answer engines actually
   mention and cite.
 
-AEOkit is the system of record for auditable answers, citations, mentions, and
+aeokit is the system of record for auditable answers, citations, mentions, and
 crawler activity. AEO Agent is the conversational interface for exploring that
 evidence. These skills make the workflow portable across supported agents.
 
-## Install skill folders
+## Install the aeokit plugin
+
+The plugin is the recommended installation for Codex, ChatGPT, and Claude Code. It keeps the three portable skills together under the `aeokit` identity.
+
+For Claude Code, add this GitHub repository as a marketplace and install the plugin:
+
+```text
+/plugin marketplace add aeokit-dev/aeo-skills
+/plugin install aeokit@aeokit
+```
+
+The skills are then available as `/aeokit:aeo-audit`, `/aeokit:aeo-improve`, and `/aeokit:aeo-observe`.
+
+For Codex and ChatGPT, install `aeokit` from the universal plugin directory after publication.
+
+## Install standalone skill folders
 
 List the catalog:
 
@@ -92,6 +107,8 @@ The repository root is a skills-only plugin for the OpenAI and Claude plugin sys
 | Claude Code | `.claude-plugin/plugin.json` | `./skills/` discovered from the plugin root |
 
 The OpenAI plugin exposes the same three skills in ChatGPT and Codex. The Claude Code plugin exposes them with the `aeokit` namespace, such as `/aeokit:aeo-audit`. Neither manifest forks or rewrites the underlying skill instructions.
+
+The Claude marketplace catalog is stored at `.claude-plugin/marketplace.json`, so this GitHub repository can be added directly as a marketplace.
 
 This layout follows the [OpenAI skill and plugin guidance](https://developers.openai.com/codex/build-skills) and [Claude Code plugin guidance](https://code.claude.com/docs/en/plugins). The npm installer remains useful for direct project or user installation without a plugin marketplace.
 
@@ -147,6 +164,14 @@ npm install
 npm run audit:citations
 npm run check
 ```
+
+Validate the Claude plugin and marketplace with Claude Code 2.1.233 or newer:
+
+```bash
+claude plugin validate .
+```
+
+Validate the Codex plugin before submission. Public Codex and ChatGPT publication uses the OpenAI Platform plugin submission portal; public Claude publication uses the plugin submission form in Claude.ai or the Anthropic Console.
 
 The GitHub Actions definition is checked in as `.github/ci.yml.example`; move it to `.github/workflows/ci.yml` when the publishing token has GitHub's `workflow` scope.
 
