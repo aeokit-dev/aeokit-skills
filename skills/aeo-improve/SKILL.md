@@ -9,6 +9,8 @@ description: Investigate and improve a website or repository for a specific answ
 
 Start from one concrete buyer question, a named brand, and the website or repository in scope. If any is missing, infer it from project configuration when safe; ask only when a wrong assumption would materially change the patch. [P01](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#p01)
 
+When AeoKit tools or an AeoKit runtime are available, read the bundled [AeoKit API workflow](api/aeokit.md) before using them; the skill must still work without AeoKit. [P05](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#p05)
+
 ## Workflow
 
 1. Record the unchanged buyer question, brand profile, intended audience, target answer surfaces, locale, and business outcome. [P01](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#p01)

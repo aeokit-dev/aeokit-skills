@@ -108,6 +108,8 @@ The repository root is a skills-only plugin for the OpenAI and Claude plugin sys
 
 The OpenAI plugin exposes the same three skills in ChatGPT and Codex. The Claude Code plugin exposes them with the `aeokit` namespace, such as `/aeokit:aeo-audit`. Neither manifest forks or rewrites the underlying skill instructions.
 
+Each skill also contains the same versioned AeoKit API workflow reference for Claude Code and Codex. Those API-specific files are authored and tested in the main `aeokit` repository, then imported into this repository before release. End users still install only this plugin; no runtime download or second skill installation is required.
+
 The Claude marketplace catalog is stored at `.claude-plugin/marketplace.json`, so this GitHub repository can be added directly as a marketplace.
 
 This layout follows the [OpenAI skill and plugin guidance](https://developers.openai.com/codex/build-skills) and [Claude Code plugin guidance](https://code.claude.com/docs/en/plugins). The npm installer remains useful for direct project or user installation without a plugin marketplace.
@@ -161,9 +163,12 @@ Requires Node.js 22.19 or newer.
 
 ```bash
 npm install
+npm run sync:aeokit-api -- /path/to/aeokit/agent-skills/api-export
 npm run audit:citations
 npm run check
 ```
+
+The sync command writes `skills/.aeokit-api.lock.json` with the API version and SHA-256 digest of every imported file. `npm run check` verifies that lock, so locally edited or stale imported guidance cannot be published accidentally.
 
 Validate the Claude plugin and marketplace with Claude Code 2.1.233 or newer:
 

@@ -34,5 +34,6 @@ test('Codex plugin skill path resolves to every bundled skill', async () => {
   assert.ok(skills.length > 0);
   for (const skill of skills) {
     await access(new URL(`${skill.name}/SKILL.md`, skillsRoot));
+    await access(new URL(`${skill.name}/api/aeokit.md`, skillsRoot));
   }
 });

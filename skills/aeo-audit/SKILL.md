@@ -9,6 +9,8 @@ description: Audit a website and its repository for crawlability, extractable en
 
 Perform a read-only, evidence-backed audit. The output is a technical readiness assessment, not an answer-engine ranking. [P02](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#p02) [C04](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#c04)
 
+When AeoKit tools or an AeoKit runtime are available, read the bundled [AeoKit API workflow](api/aeokit.md) before using them; the skill must still work without AeoKit. [P05](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#p05)
+
 ## Scope
 
 - Start with an audit plan: record the supplied buyer questions, representative page types, named answer surfaces, available evidence sources, and the checks that could materially change the conclusion. Infer missing details when safe; ask only when a wrong assumption would materially change scope. [P01](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#p01) [P07](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#p07)

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": "https://github.com/aeokit-dev/aeokit",
+  "apiVersion": "0.1.0",
+  "files": [
+    {
+      "source": "aeo-audit.md",
+      "destination": "skills/aeo-audit/api/aeokit.md",
+      "sha256": "11a7b6fabf4d598e305e0f611f9826d0925ec14d03fd89a825259c313c8eeb6a"
+    },
+    {
+      "source": "aeo-improve.md",
+      "destination": "skills/aeo-improve/api/aeokit.md",
+      "sha256": "32809675dd2208c3331737d35cb6aaf6985a2a5fdd3312197e8f7d29d30872d4"
+    },
+    {
+      "source": "aeo-observe.md",
+      "destination": "skills/aeo-observe/api/aeokit.md",
+      "sha256": "f2c2eb696877a81e720f977870000a76abdbadf9888ac219c795e2879fcd37c3"
+    }
+  ]
+}
