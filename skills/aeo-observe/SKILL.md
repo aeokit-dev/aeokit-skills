@@ -9,6 +9,8 @@ description: Measure whether independent AI research agents mention and cite a b
 
 Use AEO Preview when available so raw answers, prompt hashes, provider identity, and deterministic extraction remain reproducible. [C12](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#c12) [P04](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#p04)
 
+When AeoKit tools or an AeoKit runtime are available, read the bundled [AeoKit API workflow](api/aeokit.md) before using them; the skill must still work without AeoKit. [P05](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#p05)
+
 ## Workflow
 
 1. Record the brand, canonical domain, aliases, category, audience, use case, competitors, business outcome, and the exact buyer prompts. Preserve each prompt's provenance; generated prompts are hypotheses, not proof of customer demand. [C12](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#c12) [P01](https://github.com/aeokit-dev/aeo-skills/blob/v0.1.1/research/report-source.md#p01)

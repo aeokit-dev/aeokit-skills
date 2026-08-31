@@ -21,8 +21,10 @@ test('installs the same complete skill through every supported target', async ()
     const project = await mkdtemp(path.join(tmpdir(), `aeokit-${to}-install-`));
     const [result] = await installSkills(['aeo-audit'], { to, scope: 'project', project });
     const installed = await readFile(path.join(result.destination, 'SKILL.md'), 'utf8');
+    const apiWorkflow = await readFile(path.join(result.destination, 'api', 'aeokit.md'), 'utf8');
     const openaiMetadata = await readFile(path.join(result.destination, 'agents', 'openai.yaml'), 'utf8');
     assert.equal(installed, source, `${to} installation rewrote SKILL.md`);
+    assert.match(apiWorkflow, /# AeoKit API workflow/);
     assert.match(openaiMetadata, /display_name: "AEO Audit"/);
   }
 });

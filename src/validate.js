@@ -3,6 +3,7 @@ import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { parseDocument } from 'yaml';
 import { catalog, parseFrontmatter } from './catalog.js';
+import { validateApiExport } from './sync-api-export.js';
 
 const quotedString = /^\s*(?:-\s+)?[a-z_]+:\s*(["']).*\1\s*$/;
 
@@ -84,6 +85,7 @@ export async function validateSkills() {
   for (const skill of await catalog()) {
     failures.push(...await validateSkillDirectory(skill.directory));
   }
+  try { await validateApiExport(); } catch (error) { failures.push(error.message); }
   if (failures.length) throw new Error(failures.join('\n'));
   return true;
 }
