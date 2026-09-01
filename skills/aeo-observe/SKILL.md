@@ -13,6 +13,8 @@ When AeoKit tools or an AeoKit runtime are available, read the bundled [AeoKit A
 
 ## Workflow
 
+Use the first compatible run series as the explicit baseline. Later observations must preserve the corpus and compatibility fields below so AeoKit can evaluate experiments without silently changing the measurement instrument. [C12](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c12) [C15](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c15)
+
 1. Record the brand, canonical domain, aliases, category, audience, use case, competitors, business outcome, and the exact buyer prompts. Preserve each prompt's provenance; generated prompts are hypotheses, not proof of customer demand. [C12](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c12) [P01](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#p01)
 2. Lint prompts for neutrality. Avoid prompts that presume the tracked brand is best, deserving of inclusion, or the desired answer. Start each independent prompt in a fresh conversation; version a multi-turn journey as a different corpus and retain its full transcript. [C12](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c12) [C15](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c15)
 3. Choose and label the evidence source: native owner telemetry, verified referrals, public consumer-surface observation, or controlled simulation. Never blend these into one visibility score. [C11](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c11)
@@ -26,6 +28,8 @@ When AeoKit tools or an AeoKit runtime are available, read the bundled [AeoKit A
 Read [references/measurement-contract.md](references/measurement-contract.md) before defining metrics or interpreting a run. [C11](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c11) [P05](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#p05)
 
 ## Commands
+
+When observing for an AeoKit experiment, attach resulting run IDs only after confirming they match its baseline corpus and surfaces. Move the experiment to `evaluating`; do not label it won or lost from one noisy observation. [C12](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c12) [C13](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c13)
 
 For a configured project, resolve and record one approved `aeo-preview` version for the whole run series; do not use `@latest` for comparable baselines and reruns. [C12](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c12) [P06](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#p06)
 

@@ -5,6 +5,8 @@ description: Audit a website and its repository for crawlability, extractable en
 
 # Audit Answer-Engine Readiness
 
+An audit is the first-run diagnosis in AeoKit's lifecycle. Use its buyer questions and findings to recommend an initial prompt corpus, but do not run paid observations or create experiments unless the user separately authorizes those state-changing steps. [P02](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#p02) [P06](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#p06)
+
 **Research:** [Open the numbered claim and source ledger](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#citation-and-traceability-registry). [P05](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#p05)
 
 Perform a read-only, evidence-backed audit. The output is a technical readiness assessment, not an answer-engine ranking. [P02](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#p02) [C04](https://github.com/aeokit-dev/aeokit-skills/blob/v0.1.1/research/report-source.md#c04)
