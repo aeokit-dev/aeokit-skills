@@ -51,7 +51,7 @@ The plugin is the recommended installation for Codex, ChatGPT, and Claude Code. 
 For Claude Code, add this GitHub repository as a marketplace and install the plugin:
 
 ```text
-/plugin marketplace add aeokit-dev/aeo-skills
+/plugin marketplace add aeokit-dev/aeokit-skills
 /plugin install aeokit@aeokit
 ```
 

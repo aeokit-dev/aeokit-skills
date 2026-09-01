@@ -40,11 +40,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aeokit-dev/aeo-skills.git"
+    "url": "git+https://github.com/aeokit-dev/aeokit-skills.git"
   },
-  "homepage": "https://github.com/aeokit-dev/aeo-skills#readme",
+  "homepage": "https://github.com/aeokit-dev/aeokit-skills#readme",
   "bugs": {
-    "url": "https://github.com/aeokit-dev/aeo-skills/issues"
+    "url": "https://github.com/aeokit-dev/aeokit-skills/issues"
   },
   "license": "MIT",
   "publishConfig": {
