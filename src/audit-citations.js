@@ -7,7 +7,7 @@ const researchFile = path.join(projectRoot, 'research', 'report-source.md');
 const skillsRoot = path.join(projectRoot, 'skills');
 const citationMetadata = JSON.parse(await readFile(path.join(projectRoot, 'research', 'citation-lock.json'), 'utf8'));
 
-export const citationBase = `https://github.com/aeokit-dev/aeo-skills/blob/v${citationMetadata.version}/research/report-source.md#`;
+export const citationBase = `https://github.com/aeokit-dev/aeokit-skills/blob/v${citationMetadata.version}/research/report-source.md#`;
 const escapedCitationBase = citationBase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 function relative(file) {
