@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/aeokit-dev/aeokit-skills/compare/v0.2.0...v0.3.0) (2026-09-01)
+
+
+### Features
+
+* add continuous AEO optimization skill ([#9](https://github.com/aeokit-dev/aeokit-skills/issues/9)) ([dad7025](https://github.com/aeokit-dev/aeokit-skills/commit/dad702569b06133ab5c37062ca316c557dc3830f))
+
 ## [0.2.0](https://github.com/aeokit-dev/aeokit-skills/compare/v0.1.1...v0.2.0) (2026-09-01)
 
 
