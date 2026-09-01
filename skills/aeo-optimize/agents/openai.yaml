@@ -1,0 +1,4 @@
+interface:
+  display_name: "AEO Optimize"
+  short_description: "Run the continuous audit-to-evaluation AEO loop"
+  default_prompt: "Use $aeo-optimize to improve this brand's answer visibility over time."

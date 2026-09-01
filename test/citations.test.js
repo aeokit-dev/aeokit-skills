@@ -5,7 +5,7 @@ import { auditCitations, auditInstructionMarkdown, citationBase } from '../src/a
 test('every instructional line is connected to the numbered research ledger', async () => {
   const result = await auditCitations();
   assert.deepEqual(result.errors, []);
-  assert.equal(result.files.length, 8);
+  assert.equal(result.files.length, 9);
   assert.equal(result.registry.claims.length, 63);
   assert.equal(result.registry.sources.length, 76);
   assert.equal(result.registry.policies.length, 7);
