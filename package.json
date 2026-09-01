@@ -1,6 +1,6 @@
 {
   "name": "@aeokit/skills",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Portable Agent Skills for evidence-backed answer-engine optimization workflows.",
   "type": "module",
   "bin": {
