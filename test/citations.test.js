@@ -30,7 +30,7 @@ test('citation auditor rejects uncited, malformed, and unknown references', () =
   assert.ok(result.errors.some((error) => error.includes('unknown citation C02')));
 });
 
-test('citation base is pinned to the package release tag', () => {
+test('citation base is pinned to a versioned research ledger tag', () => {
   assert.match(citationBase, /\/blob\/v\d+\.\d+\.\d+\/research\/report-source\.md#$/);
   assert.doesNotMatch(citationBase, /\/blob\/main\//);
 });

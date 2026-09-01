@@ -5,9 +5,9 @@ import { fileURLToPath } from 'node:url';
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const researchFile = path.join(projectRoot, 'research', 'report-source.md');
 const skillsRoot = path.join(projectRoot, 'skills');
-const packageMetadata = JSON.parse(await readFile(path.join(projectRoot, 'package.json'), 'utf8'));
+const citationMetadata = JSON.parse(await readFile(path.join(projectRoot, 'research', 'citation-lock.json'), 'utf8'));
 
-export const citationBase = `https://github.com/aeokit-dev/aeo-skills/blob/v${packageMetadata.version}/research/report-source.md#`;
+export const citationBase = `https://github.com/aeokit-dev/aeo-skills/blob/v${citationMetadata.version}/research/report-source.md#`;
 const escapedCitationBase = citationBase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 function relative(file) {

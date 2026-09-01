@@ -178,7 +178,9 @@ claude plugin validate .
 
 Validate the Codex plugin before submission. Public Codex and ChatGPT publication uses the OpenAI Platform plugin submission portal; public Claude publication uses the plugin submission form in Claude.ai or the Anthropic Console.
 
-The GitHub Actions definition is checked in as `.github/ci.yml.example`; move it to `.github/workflows/ci.yml` when the publishing token has GitHub's `workflow` scope.
+Releases are automated with Release Please and npm trusted publishing. Conventional `feat:`, `fix:`, and breaking-change commits update a release PR; merging that PR creates the GitHub release and publishes the exact tagged commit to npm with provenance.
+
+One-time activation requires an organization owner to allow GitHub Actions to create pull requests, then an npm package owner must add a trusted publisher for repository `aeokit-dev/aeokit-skills`, workflow `release.yml`, and environment `npm`. Finally set the repository variable `RELEASE_AUTOMATION_ENABLED` to `true`. The release job remains safely disabled while that variable is absent or false.
 
 ## License
 
