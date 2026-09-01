@@ -2,7 +2,7 @@ import { catalog } from './catalog.js';
 import { installSkills, targetRoot } from './install.js';
 import { validateSkills } from './validate.js';
 
-const version = '0.1.1';
+const version = '0.1.1'; // x-release-please-version
 
 function parse(argv) {
   const [command = 'help', ...rest] = argv;
